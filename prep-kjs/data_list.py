@@ -22,11 +22,11 @@ test_label_malA = [ 1 if score>3 else 0 if score<3 else "amb" for score in test_
 
 #store in csv files
 train_malB = pd.DataFrame( list(zip(train_dataset,train_label_malB)), columns=["filename","label"] ) # label_score
-train_malB.to_csv(save_dir + "/train_malB.csv")
+train_malB.to_csv(save_dir + "/train_malB.csv",index=False)
 test_malB = pd.DataFrame( list(zip(test_dataset,test_label_malB)), columns=["filename","label"] ) # label_score
-test_malB.to_csv(save_dir + "/test_malB.csv")
+test_malB.to_csv(save_dir + "/test_malB.csv",index=False)
 
 train_malA = pd.DataFrame( list(zip(train_dataset,train_label_malA)), columns=["filename","label"] ) # label_score
-train_malA.to_csv(save_dir + "/train_malA.csv")
+train_malA.to_csv(save_dir + "/train_malA.csv",index=False)
 test_malA = pd.DataFrame( list(zip(test_dataset,test_label_malA)), columns=["filename","label"] ) # label_score
-test_malA.to_csv(save_dir + "/test_malA.csv")
+test_malA.to_csv(save_dir + "/test_malA.csv",index=False)
