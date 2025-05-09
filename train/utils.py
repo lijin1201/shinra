@@ -10,6 +10,7 @@ import math
 
 import torch.nn as nn
 import torch.nn.init as init
+import shutil
 
 
 def get_mean_and_std(dataset):
@@ -42,8 +43,9 @@ def init_params(net):
                 init.constant(m.bias, 0)
 
 
-_, term_width = os.popen('stty size', 'r').read().split()
-term_width = int(term_width)
+# _, term_width = os.popen('stty size', 'r').read().split()
+# term_width = int(term_width)
+term_width = shutil.get_terminal_size((80, 20)).columns
 
 TOTAL_BAR_LENGTH = 65.
 last_time = time.time()

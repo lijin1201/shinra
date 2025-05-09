@@ -9,6 +9,7 @@ Reference:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from typing import Any
 
 
 class BasicBlock(nn.Module):
@@ -104,8 +105,8 @@ class ResNet(nn.Module):
         return out
 
 
-def ResNet18():
-    return ResNet(BasicBlock, [2, 2, 2, 2])
+def ResNet18(**kwargs:Any):
+    return ResNet(BasicBlock, [2, 2, 2, 2],**kwargs)
 
 
 def ResNet34():
