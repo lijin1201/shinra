@@ -3,3 +3,5 @@
 .settings
 .devcontainer*
 __pycache__
+frlyj
+stage2/pre*
